@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио некоего студента по кличке "Веслов"</title>
+    <meta name="description" content="Сайт портфолио некоего студента по кличке Веслов">
+    <link rel="stylesheet" href="css/outlines.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/neon-genesis-evangelion.svg" width="60" height="60" alt="LOGO">
+        <nav class="menu">
+            <a href="#me">Обо мне</a>
+            <a href="#abilities">Навыки</a>
+            <a href="#interests">Интересы</a>
+            <a href="#contacts">Контакты</a>
+
+        </nav>
+        <!--отнимать CSS жестоко,вместо красивого FLEX или GRID выглядит очень плохо... это не смешно: -->
+    </header>
+    <main>
+        <audio src="audio/Serial_Experiments_Lain_-_Powerline_Noise.mp3" preload autoplay loop></audio>
+        <section>
+            <h1>Веселов ярослав</h1>
+            <p>Программист-приколист</p>
+            <img width="400" height="400" src="img/user-photo.jpg" alt="my photo(it's really cool)">
+        </section>
+
+        <section id="me">
+            <h2>Пара слов обо мне</h2>
+            <p>Добро пожаловать на мою айти страничку</p>
+            <p>В данный момент я пытаюсь делать вид,
+                что не учусь в магистратуре МФ МГТУ им. Н.Э. Баумана(чтобы на моей нынешней работе не догадались)
+                по направлению "Информатика и вычислительная техника"</p>
+
+            <p>В прошлом году защитил диплом бакалавра на тему "Распознавание и генерация цветных 2D баркодов". Работа
+                была высоко оценена коммисией, и даже на основе её пригласили на работу(жаль то что я делал не
+                пригодилось им).
+            </p>
+            <p>Сейчас работаю в ЦУП ЦНИИМАШ инженером с маленькой буквы, так как по сути работаю балистиком,слежу за
+                космосом. Надеюсь в будущем я смогу отсюда уйти в веб программирование,где мои навыки будут
+                восстребованы.
+            </p>
+        </section>
+        <section id="abilities">
+            <h2>Мои навыки</h2>
+            <div> сортировать
+                <button>по названию</button>
+                <button>по уровню</button>
+            </div>
+
+            <dl>
+                <dt>javascript</dt>
+                <dd>
+                    <div style="width: 30%;">30%</div>
+                </dd>
+                <dt>html</dt>
+                <dd>
+                    <div style="width: 70%;">70%</div>
+                </dd>
+                <dt>css</dt>
+                <dd>
+                    <div style="width: 70%;">70%</div>
+                </dd>
+                <dt>c++</dt>
+                <dd>
+                    <div style="width: 50%;">50%</div>
+                </dd>
+                <dt>english</dt>
+                <dd>
+                    <div style="width: 70%;">70%</div>
+                </dd>
+            </dl>
+
+        </section>
+        <section id="interests">
+            <h2>Мои интересы </h2>
+            <p>Наибольший интерес для меня представляет в данный момент программирование и еда.</p>
+            <p>Но помимо учебы я еще люблю изучать английский, японский и смотреть
+                <ruby>
+                    アニメ<rp>(</rp>
+                    <rt>аниме</rt>
+                    <rp>)</rp>
+                </ruby>,но кроме этого ещё заниматься кулинарию.
+            </p>
+
+            <p>Цитаты которые меня вдохновляют:
+                <cite><a href="https://www.youtube.com/watch?v=6cPME5TKVYU">underidoderidoderiododeriodoo</a></cite> и
+                <cite><a href="https://www.youtube.com/watch?v=Sg14jNbBb-8">POWER!!!! UNLIMITED POWER!!!!</a></cite>
+            </p>
+            <!-- никто не узнает,что я на самом деле люблю больше вареники, а не
+                пельмени(если там конечно качественные продукты использованы) -->
+        </section>
+        <section id="contacts">
+            <h2>Мои контакты</h2>
+            <ul class="contact">
+                <li>
+                    <a href="tel:+79261190504">8 926 119-05-04</a>
+                </li>
+                <li>
+                    <a href="mailto:veselov.jarik@yandex.ru">почта</a>
+                </li>
+            </ul>
+            <ul class="social">
+                <li>
+                    <a href="telega">telegramm</a>
+                </li>
+                <li>
+                    <a href="vk">vk</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p> © Веселов Ярослав 2023</p>
+    </footer>
+
+</body>
+
+</html>
