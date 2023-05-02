@@ -49,6 +49,7 @@ h3{
 }
 h1.subtitle{
     color: var(--green);
+    font-size: 38px;
 }
 
 a, button{
@@ -65,7 +66,7 @@ footer{
     margin: 0 auto;
     padding: 0 20px;
 }
-button,.social,
+button,
 a[class^="social-link"]  {
     border: 1px solid var(--green);
     color:inherit;
@@ -95,15 +96,16 @@ a[class^="social-link"]:hover{
 .main-nav a:hover{
     color:var(--green);
 }
-.social {
-    border: 1px solid var(--green);
+.social,.contact {
     border-radius: 5px;
     margin: 0;
     padding: 10px;
     list-style-type: none;
-    
+    color:inherit;
+    background-color: transparent;
+    transition: linear 0.3s 0.5s;
 }
-.social li {
+.social li,.contact li {
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -120,30 +122,50 @@ a[class^="social-link"]:hover{
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-a[class^="social-link"]{
+a[class^="social-link"],a[class^="contact-list"] {
     display:block;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 50%;
+    text-decoration: none;
+    color: var(--black);
     margin: 0;
     padding: 10px;
+    list-style-type: none;
+    transition: linear 0.3s 0.5s;
+}
+a[class^="social-link"] {
     width: 50px;
     height:50px;
-    list-style-type: none;
+    border-radius: 50%;
 }
+
 .social-link_telega{
-    
     background-image: url(../img/socials/telegram.svg);
 }
 .social-link_vk{
     background-image: url(../img/socials/vk.svg);
+}
+a[class^="contact-list"] {
+    background-size:30px;
+    margin-right: 40px;
+    background-position: left;
+}
+a[class^="contact-list"]:hover{
+    color: var(--green);
+}
+.contact-list_phone{
+    background-image: url(../img/contacts/phone.svg);
+    text
+}
+.contact-list_email{
+    background-image: url(../img/contacts/email.svg);
 }
 .skill-list {
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-.skill-list dt {
+.skill-list dt,a[class^="contact-list"] {
     margin-bottom: 6px;
     padding: 5px 0 5px 38px;
     background-position: left;
