@@ -3,14 +3,24 @@
 *::after{
     box-sizing: border-box;
 }
-
 @font-face {
-    font-family: "Open-sans";
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
-    src: local("Arial"),
-    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    font-display: swap;
+    src: local('Open Sans'), local('OpenSans'),
+        url("../fonts/OpenSans-Regular.woff2") format("woff2"),
         url("../fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+        url("../fonts/OpenSans-Bold.woff") format("woff");
 }
 
 :root{
@@ -67,7 +77,7 @@ footer{
     padding: 0 20px;
 }
 button,
-a[class^="social-link"]  {
+[class^="social-link"]  {
     border: 1px solid var(--green);
     color:inherit;
     background-color: transparent;
@@ -81,7 +91,7 @@ button  {
 
 
 button:hover,
-a[class^="social-link"]:hover{
+[class^="social-link"]:hover{
     color:var(--white);
     background-color: var(--green);
 }
@@ -122,7 +132,7 @@ a[class^="social-link"]:hover{
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-a[class^="social-link"],a[class^="contact-list"] {
+[class^="social-link"],[class^="contact-list"] {
     display:block;
     background-repeat: no-repeat;
     background-position: center;
@@ -133,7 +143,7 @@ a[class^="social-link"],a[class^="contact-list"] {
     list-style-type: none;
     transition: linear 0.3s 0.5s;
 }
-a[class^="social-link"] {
+[class^="social-link"] {
     width: 50px;
     height:50px;
     border-radius: 50%;
@@ -145,17 +155,16 @@ a[class^="social-link"] {
 .social-link_vk{
     background-image: url(../img/socials/vk.svg);
 }
-a[class^="contact-list"] {
+[class^="contact-list"] {
     background-size:30px;
     margin-right: 40px;
     background-position: left;
 }
-a[class^="contact-list"]:hover{
+[class^="contact-list"]:hover{
     color: var(--green);
 }
 .contact-list_phone{
     background-image: url(../img/contacts/phone.svg);
-    text
 }
 .contact-list_email{
     background-image: url(../img/contacts/email.svg);
@@ -165,7 +174,7 @@ a[class^="contact-list"]:hover{
     padding: 0;
     line-height: 1;
 }
-.skill-list dt,a[class^="contact-list"] {
+.skill-list dt,[class^="contact-list"] {
     margin-bottom: 6px;
     padding: 5px 0 5px 38px;
     background-position: left;
