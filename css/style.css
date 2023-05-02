@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Open-sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Arial"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("../fonts/OpenSans-Regular.woff") format("woff");
+}
+
+:root{
+    --black: #212121;
+    --green: #09A494;
+    --white: #ffffff;
+
+}
+body{
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--black);
+
+}
+
+h1,h2,h3{
+    font-weight: 700;
+}
+
+h2,h3,h1.subtitle{
+    line-height: 120%;
+}
+
+h1{
+    font-size: 60px;
+    line-height: 110%;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 24px;
+}
+h1.subtitle{
+    color: var(--green);
+}
+
+a, button{
+    line-height: 100%;
+}
+
+footer{
+    color: var(--white);
+    background-color: var(--black);
+}
+.container {
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+button,.social,
+a[class^="social-link"]  {
+    border: 1px solid var(--green);
+    color:inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: linear 0.3s 0.5s;
+}
+button  {
+    padding:6px 10px 10px;
+    border-radius: 8px;
+}
+
+
+button:hover,
+a[class^="social-link"]:hover{
+    color:var(--white);
+    background-color: var(--green);
+}
+.main-nav a{
+    color: var(--black);
+    padding: 10px 15px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    transition: linear 0.3s 0.5s;
+}
+.main-nav a:hover{
+    color:var(--green);
+}
+.social {
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+    
+}
+.social li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+a[class^="social-link"]{
+    display:block;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0;
+    padding: 10px;
+    width: 50px;
+    height:50px;
+    list-style-type: none;
+}
+.social-link_telega{
+    
+    background-image: url(../img/socials/telegram.svg);
+}
+.social-link_vk{
+    background-image: url(../img/socials/vk.svg);
+}
+.skill-list {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+.skill-list dt {
+    margin-bottom: 6px;
+    padding: 5px 0 5px 38px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+.skill-level {
+    margin: 4px 0 20px;
+    padding: 2px;
+    font-size: 0;
+    border: 1px solid var(--black);
+    border-radius: 16px;
+}
+.skill-level div {
+    height: 14px;
+    background-color: var(--green);
+    border-radius: 8px;
+}
+div[class^="skill-item_"] {
+    text-transform: lowercase;
+}
+.skill-item_html {
+    background-image: url("../img/skills/html.svg");
+}
+.skill-item_css {
+    background-image: url("../img/skills/css.svg");
+}
+.skill-item_cpp {
+    background-image: url("../img/skills/c++.svg");
+}
+.skill-item_javascript {
+    background-image: url("../img/skills/javascript.svg");
+}
+.intro img{
+    border-radius: 50%;
+}
