@@ -39,6 +39,14 @@ body{
 
 }
 
+a{
+    color:var(--black);
+    text-decoration:none;
+}
+a:hover{
+    color:var(--green);
+}
+
 h1,h2,h3{
     font-weight: 700;
 }
@@ -60,6 +68,7 @@ h3{
 h1.subtitle{
     color: var(--green);
     font-size: 38px;
+    font-weight: 400;
 }
 
 a, button{
@@ -82,7 +91,7 @@ button,
     color:inherit;
     background-color: transparent;
     cursor: pointer;
-    transition: linear 0.3s 0.5s;
+    transition: linear 0.5s;
 }
 button  {
     padding:6px 10px 10px;
@@ -101,7 +110,7 @@ button:hover,
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
-    transition: linear 0.3s 0.5s;
+    transition: linear 0.5s;
 }
 .main-nav a:hover{
     color:var(--green);
@@ -113,7 +122,7 @@ button:hover,
     list-style-type: none;
     color:inherit;
     background-color: transparent;
-    transition: linear 0.3s 0.5s;
+    transition: linear 0.5s;
 }
 .social li,.contact li {
     display: inline-block;
@@ -140,8 +149,9 @@ button:hover,
     color: var(--black);
     margin: 0;
     padding: 10px;
+    gap: 12px;
     list-style-type: none;
-    transition: linear 0.3s 0.5s;
+    transition: linear 0.5s;
 }
 [class^="social-link"] {
     width: 50px;
@@ -158,6 +168,7 @@ button:hover,
 [class^="contact-list"] {
     background-size:30px;
     margin-right: 40px;
+    gap:10px;
     background-position: left;
 }
 [class^="contact-list"]:hover{
