@@ -47,35 +47,34 @@ a:hover{
     color:var(--green);
 }
 
-h1,h2,h3{
-    font-weight: 700;
-}
-
-h2,h3,h1.subtitle{
-    line-height: 120%;
-}
 
 h1{
     font-size: 60px;
+    font-weight: 700;
     line-height: 110%;
 }
 h2{
     font-size: 30px;
+    font-weight: 700;
+    line-height: 120%;
 }
 h3{
     font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
 }
-h1.subtitle{
+p.subtitle{
     color: var(--green);
     font-size: 38px;
     font-weight: 400;
+    line-weight: 120%;
 }
 
 a, button{
     line-height: 100%;
 }
 
-footer{
+.main-footer{
     color: var(--white);
     background-color: var(--black);
 }
@@ -85,32 +84,67 @@ footer{
     margin: 0 auto;
     padding: 0 20px;
 }
-button,
-[class^="social-link"]  {
-    border: 1px solid var(--green);
-    color:inherit;
-    background-color: transparent;
+
+button {
+    border: none;
     cursor: pointer;
-    transition: linear 0.5s;
-}
-button  {
-    padding:6px 10px 10px;
+    text-transform: lowercase;
+    box-sizing: border-box;
+    padding: 6px 10px 10px;
+    border: 1px solid var(--green);
     border-radius: 8px;
+    color: var(--green);
+    line-height: 1;
+    background-color: transparent;
 }
 
-
-button:hover,
-[class^="social-link"]:hover{
-    color:var(--white);
+button:hover {
+    color: var(--white);
     background-color: var(--green);
+    transition: 300ms;
 }
+
+.social-link {
+  display: block;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #09A494;
+  border-radius: 50%;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-link:hover {
+  background-color: var(--green);
+  transition: 300ms;
+}
+
+.contact-link {
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  color: var(--black);
+  padding: 0px;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 5px 0px 5px 42px;
+}
+
+.contact-link:hover {
+  text-decoration: none;
+  color: var(--green);
+  transition: 300ms;
+}
+
 .main-nav a{
     color: var(--black);
     padding: 10px 15px;
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
-    transition: linear 0.5s;
+    transition: linear 0.3s;
 }
 .main-nav a:hover{
     color:var(--green);
@@ -122,7 +156,7 @@ button:hover,
     list-style-type: none;
     color:inherit;
     background-color: transparent;
-    transition: linear 0.5s;
+    transition: linear 0.3s;
 }
 .social li,.contact li {
     display: inline-block;
@@ -141,23 +175,6 @@ button:hover,
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-[class^="social-link"],[class^="contact-list"] {
-    display:block;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-decoration: none;
-    color: var(--black);
-    margin: 0;
-    padding: 10px;
-    gap: 12px;
-    list-style-type: none;
-    transition: linear 0.5s;
-}
-[class^="social-link"] {
-    width: 50px;
-    height:50px;
-    border-radius: 50%;
-}
 
 .social-link_telega{
     background-image: url(../img/socials/telegram.svg);
@@ -165,15 +182,7 @@ button:hover,
 .social-link_vk{
     background-image: url(../img/socials/vk.svg);
 }
-[class^="contact-list"] {
-    background-size:30px;
-    margin-right: 40px;
-    gap:10px;
-    background-position: left;
-}
-[class^="contact-list"]:hover{
-    color: var(--green);
-}
+
 .contact-list_phone{
     background-image: url(../img/contacts/phone.svg);
 }
@@ -185,7 +194,7 @@ button:hover,
     padding: 0;
     line-height: 1;
 }
-.skill-list dt,[class^="contact-list"] {
+.skill-list dt {
     margin-bottom: 6px;
     padding: 5px 0 5px 38px;
     background-position: left;
@@ -214,10 +223,13 @@ div[class^="skill-item_"] {
     background-image: url("../img/skills/css.svg");
 }
 .skill-item_cpp {
-    background-image: url("../img/skills/c++.svg");
+    background-image: url("../img/skills/cpp.svg");
 }
 .skill-item_javascript {
     background-image: url("../img/skills/javascript.svg");
+}
+.skill-item_english {
+  background-image: url("../img/skills/english.svg")
 }
 .intro img{
     border-radius: 50%;
