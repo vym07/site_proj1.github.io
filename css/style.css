@@ -27,7 +27,6 @@
     --black: #212121;
     --green: #09A494;
     --white: #ffffff;
-
 }
 body{
     font-family: "Open Sans", "Arial", sans-serif;
@@ -47,16 +46,31 @@ a:hover{
     color:var(--green);
 }
 
+.main-header {
+  display: flex;
+  padding-top: 60px;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav{
+  display: flex;
+}
+
 
 h1{
     font-size: 60px;
     font-weight: 700;
     line-height: 110%;
+    margin: 0;
+    margin-bottom: 20px;
 }
 h2{
     font-size: 30px;
     font-weight: 700;
     line-height: 120%;
+    margin: 0;
+    margin-bottom: 40px;
 }
 h3{
     font-size: 24px;
@@ -68,21 +82,51 @@ p.subtitle{
     font-size: 38px;
     font-weight: 400;
     line-weight: 120%;
+    margin:0;
+}
+
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 a, button{
     line-height: 100%;
 }
+.text-wrapper{
+  max-width: 800px;
+}
+
+.text-wrapper p+p {
+  margin-top: 15px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 120px;
+}
 
 .main-footer{
     color: var(--white);
     background-color: var(--black);
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .container {
     min-width: 320px;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.contact, .about, .skills, .interests{
+  margin-bottom: 120px;
 }
 
 button {
@@ -102,6 +146,24 @@ button:hover {
     color: var(--white);
     background-color: var(--green);
     transition: 300ms;
+}
+
+.skills-buttons {
+  display: flex;
+  padding: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.skills-buttons div{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.skills-buttons h2{
+  margin: 0;
 }
 
 .social-link {
@@ -141,7 +203,6 @@ button:hover {
 .main-nav a{
     color: var(--black);
     padding: 10px 15px;
-    display: inline-block;
     text-decoration: none;
     background-color: transparent;
     transition: linear 0.3s;
@@ -150,13 +211,23 @@ button:hover {
     color:var(--green);
 }
 .social,.contact {
+    display: flex;
     border-radius: 5px;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     list-style-type: none;
     color:inherit;
     background-color: transparent;
     transition: linear 0.3s;
+}
+
+.social {
+  gap: 20px;
+  list-style-type: none;
+}
+.contact {
+  gap: 40px;
+  margin-bottom: 40px;
 }
 .social li,.contact li {
     display: inline-block;
