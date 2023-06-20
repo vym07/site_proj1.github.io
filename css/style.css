@@ -48,7 +48,7 @@ a:hover{
 
 .main-header {
   display: flex;
-  padding-top: 60px 0px 0px;
+  padding-top: 60px;
   gap: 40px;
   margin-bottom: 120px;
   align-items: center;
@@ -82,7 +82,7 @@ p.subtitle{
     color: var(--green);
     font-size: 38px;
     font-weight: 400;
-    line-weight: 120%;
+    line-height: 120%;
     margin:0;
 }
 
@@ -147,21 +147,22 @@ button:hover {
     transition: 300ms;
 }
 
-.skills-buttons {
+.skills-header {
   display: flex;
   padding: 0;
   align-items: flex-start;
   justify-content: space-between;
   margin: 0;
+  gap: 40px;
   margin-bottom: 40px;
 }
 
-.skills-buttons div{
+.skills-buttons {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-.skills-buttons h2{
+.skills-header h2{
   margin: 0;
 }
 
