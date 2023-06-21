@@ -460,3 +460,25 @@ div[class^="skill-item_"] {
   margin-bottom: 50px;
 }
 }
+
+/*навыки*/
+@media screen and (max-width: 380px){
+  .skills-buttons {
+    width: 100%;
+    text-align: left;
+    align-items: start;
+    flex-direction: column;
+  }
+  .skills-buttons div{
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+    gap: 10px;
+    
+  }
+  
+  .skills-buttons div button{
+    width: 100%;
+  }
+}
