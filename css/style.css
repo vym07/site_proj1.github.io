@@ -102,6 +102,15 @@ a, button{
   margin-top: 15px;
 }
 
+.main-header-wrap{
+  line-height: 0;
+}
+
+.nav-btn{
+  display: none;
+}
+
+
 .intro {
   display: flex;
   flex-direction: row;
@@ -198,6 +207,10 @@ button:hover {
   text-decoration: none;
   color: var(--green);
   transition: 300ms;
+}
+
+.main-nav{
+  display: flex;
 }
 
 .main-nav a{
@@ -308,4 +321,142 @@ div[class^="skill-item_"] {
 }
 .intro img{
     border-radius: 50%;
+}
+/* Tablet Landscape*/
+@media screen and (max-width: 1024px){
+  h1{
+    font-size: 50px;
+  }
+  
+  h2{
+    font-size: 24px;
+
+  }
+  p.subtitle  {
+    font-size: 27px;
+  }
+  body{
+    font-size: 16px;
+  }
+  a{
+    font-size: 16px;
+  }
+  .main-photo{
+    max-width: 250px;
+    max-height: 250px;
+  }
+  
+  .about, .skills,.social, .interests, .intro, .main-header{
+  margin-bottom: 80px;
+}
+}
+
+
+/* Mobile Landscape*/
+@media screen and (max-width: 650px){
+  h1{
+    font-size: 32px;
+    margin: 0;
+  }
+  
+  h2{
+    font-size: 20px;
+    margin-bottom: 30px;
+
+  }
+  p.subtitle  {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  body{
+    font-size: 14px;
+  }
+  a{
+    font-size: 14px;
+  }
+  .nav-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .main-header {
+    padding-top: 20px;
+  }
+  .main-header-wrap{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main-photo {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+.nav-btn_close {
+    background-image: url(../img/close.svg);
+    border: 0;
+  }
+  
+  .nav-btn_open {
+    background-image: url(../img/burger.svg);
+    border: 0;
+  }
+  
+  .contact {
+    margin-bottom: 30px;
+  }
+  
+  .main-logo{
+    width: 40px;
+    height: 40px;
+  }
+  
+  .main-header{
+    flex-direction: column;
+  }
+  
+  .main-nav a{
+    padding: 20px 30px;
+    flex-direction: column;
+  }
+  .info {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+  
+  .skills-buttons {
+    margin-bottom: 30px;
+  }
+  
+  .info .text-wrapper {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .contact-list_email, .contact-list_phone{
+    padding: 8px 0px 8px 42px;
+  }
+  
+  .about, .skills,.social, .interests, .intro, .main-header{
+    margin-bottom: 60px;
+  }
+  
+}
+
+/* Mobile Portrait*/
+@media screen and (max-width: 360px){
+  .social{
+    gap: 15px
+  }
+  .social {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .about, .skills,.social, .interests, .intro, .main-header{
+  margin-bottom: 50px;
+}
 }
