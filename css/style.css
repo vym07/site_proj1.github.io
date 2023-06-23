@@ -131,10 +131,8 @@ a, button{
     max-width: 1280px;
     margin: 0 auto;
     padding-left: 20px;
-    padding-top: 50;
-    padding-bottom: 50px;
+    padding-right: 20px;
 }
-
 
 
 button {
@@ -260,8 +258,8 @@ button:hover {
     overflow: hidden;
 }
 
-.about, .skills,.social, .interests{
-  margin-bottom: 120px;
+.about, .contacts, .interests{
+  /*margin-bottom: 120px;*/
 }
 
 .social-link_telega{
@@ -346,7 +344,7 @@ div[class^="skill-item_"] {
     max-height: 250px;
   }
   
-  .about, .skills,.social, .interests, .intro, .main-header{
+  .about, .skills,.contacts, .interests, .intro, .main-header{
   margin-bottom: 80px;
 }
 }
@@ -381,13 +379,14 @@ div[class^="skill-item_"] {
   }
   
   .main-header {
-    padding-top: 20px;
+    padding: 20px 0px 0px;
     gap: 20px;
   }
   .main-header-wrap{
     width: 100%;
     display: flex;
     align-items: center;
+    padding-top: 20px;
     justify-content: space-between;
   }
   .main-photo {
@@ -432,6 +431,7 @@ div[class^="skill-item_"] {
   .intro {
     flex-direction: column-reverse;
     gap: 30px;
+    text-align: center;
   }
   
   .skills-buttons {
@@ -451,7 +451,7 @@ div[class^="skill-item_"] {
     padding-bottom: 30px;
     padding-top: 30px;
   }
-  .about, .skills,.social, .interests, .intro, .main-header{
+  .about, .skills,.contacts, .interests, .intro, .main-header{
     margin-bottom: 60px;
   }
   
@@ -459,15 +459,13 @@ div[class^="skill-item_"] {
 
 /* Mobile Portrait*/
 @media screen and (max-width: 360px){
-  .social{
-    gap: 15px
-  }
+  
   .social {
     gap: 15px;
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
-  .about, .skills,.social, .interests, .intro, .main-header{
+  .about, .skills,.contacts, .interests, .intro, .main-header{
   margin-bottom: 50px;
 }
 }
