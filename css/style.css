@@ -50,7 +50,6 @@ a:hover{
   display: flex;
   padding-top: 60px;
   gap: 40px;
-  margin-bottom: 120px;
   align-items: center;
 }
 
@@ -118,18 +117,14 @@ a, button{
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  margin-bottom: 120px;
 }
 
 .main-footer{
     color: var(--white);
     background-color: var(--black);
     margin: 0;
-<<<<<<< HEAD
-=======
     padding-top: 50px;
     padding-bottom: 50px;
->>>>>>> 5e3e08e (fixed layout bugs)
 }
 .container {
     min-width: 320px;
@@ -263,12 +258,8 @@ button:hover {
     overflow: hidden;
 }
 
-.about, .contacts, .interests{
-<<<<<<< HEAD
-  /*margin-bottom: 120px;*/
-=======
+section, .main-header{
   margin-bottom: 120px;
->>>>>>> 5e3e08e (fixed layout bugs)
 }
 
 .social-link_telega{
@@ -353,7 +344,7 @@ div[class^="skill-item_"] {
     max-height: 250px;
   }
   
-  .about, .skills,.contacts, .interests, .intro, .main-header{
+  section, .main-header{
   margin-bottom: 80px;
 }
 }
@@ -395,7 +386,6 @@ div[class^="skill-item_"] {
     width: 100%;
     display: flex;
     align-items: center;
-    padding-top: 20px;
     justify-content: space-between;
   }
   .main-photo {
@@ -442,17 +432,10 @@ div[class^="skill-item_"] {
     gap: 30px;
     text-align: center;
   }
-<<<<<<< HEAD
-  
-  .skills-buttons {
-    margin-bottom: 30px;
-  }
-=======
   .skills-header {
     margin-bottom: 30px;
   }
 
->>>>>>> 5e3e08e (fixed layout bugs)
   
   .info .text-wrapper {
     margin-top: 30px;
@@ -463,33 +446,34 @@ div[class^="skill-item_"] {
     padding: 8px 0px 8px 42px;
   }
   
-<<<<<<< HEAD
-  .main-footer .container {
-=======
   .main-footer {
->>>>>>> 5e3e08e (fixed layout bugs)
     padding-bottom: 30px;
     padding-top: 30px;
   }
-  .about, .skills,.contacts, .interests, .intro, .main-header{
+  section, .main-header{
     margin-bottom: 60px;
   }
-<<<<<<< HEAD
-=======
 
   .skill-list dt {
     padding-bottom: 10px;
   }
->>>>>>> 5e3e08e (fixed layout bugs)
   
 }
 
 /* Mobile Portrait*/
 @media screen and (max-width: 360px){
-  
-<<<<<<< HEAD
-  .social {
-=======
+  .contacts ul{
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  section, .main-header{
+  margin-bottom: 50px;
+}
+}
+
+/*навыки*/
+@media screen and (max-width: 380px){
   .skills-header{
     flex-direction: column;
     gap: 20px;
@@ -498,26 +482,7 @@ div[class^="skill-item_"] {
   .skills-buttons{
     gap: 10px;
   }
-
-
-
-  .contacts ul{
->>>>>>> 5e3e08e (fixed layout bugs)
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-<<<<<<< HEAD
-=======
-
->>>>>>> 5e3e08e (fixed layout bugs)
-  .about, .skills,.contacts, .interests, .intro, .main-header{
-  margin-bottom: 50px;
-}
-}
-
-/*навыки*/
-@media screen and (max-width: 380px){
+  
   .skills-buttons {
     width: 100%;
     text-align: left;
@@ -530,16 +495,9 @@ div[class^="skill-item_"] {
     text-align: left;
     align-items: start;
     gap: 10px;
-<<<<<<< HEAD
-    
-  }
-  
-  .skills-buttons div button{
-=======
   }
   
   .skills-buttons button{
->>>>>>> 5e3e08e (fixed layout bugs)
     width: 100%;
   }
 }
