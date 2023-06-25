@@ -124,7 +124,6 @@ button {
   gap: 70px;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
 }
 
 .main-footer {
@@ -518,8 +517,12 @@ div[class^="skill-item_"] {
 
 /* Mobile Portrait*/
 @media screen and (max-width: 360px) {
-  .contacts ul {
-    flex-wrap: wrap;
+  .contacts ul{
+    gap: 15px;
+  }
+  
+  .contact{
+    margin-bottom: 20px;
   }
 
   section,
