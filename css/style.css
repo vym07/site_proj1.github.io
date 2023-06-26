@@ -30,6 +30,23 @@
   --white: #ffffff;
 }
 
+.dark-theme {
+  --black: #CCCCCC;
+  --white: #031923;
+}
+
+.dark-theme .social-link {
+  background-color: var(--black);
+}
+
+.dark-theme .contact-list_phone {
+  background-image: url("../img/contacts/phone_dark.svg");
+}
+
+.dark-.contact-list_email {
+  background-image: url("../img/contacts/email_dark.svg");
+}
+
 body {
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
@@ -37,7 +54,7 @@ body {
   font-size: 20px;
   line-height: 150%;
   color: var(--black);
-
+  background-color: var(--white);
 }
 
 a {
