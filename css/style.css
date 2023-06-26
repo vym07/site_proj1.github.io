@@ -43,8 +43,13 @@
   background-image: url("../img/contacts/phone_dark.svg");
 }
 
-.dark-.contact-list_email {
+.dark-theme .contact-list_email {
   background-image: url("../img/contacts/email_dark.svg");
+}
+.dark-theme .main-footer {
+  color: var(--black);
+  background-color: var(--white);
+  border-top: var(--green) 1px solid;
 }
 
 body {
