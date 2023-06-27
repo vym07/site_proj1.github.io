@@ -10,7 +10,6 @@ const skills = {
         this.jsonPath = jsonPath;
         this.skillList = skillList;
         this.sectionSkills = sectionSkills;
-        console.log(jsonPath);
         fetch(jsonPath)
             .then(data => data.json())
             .then(object => {
