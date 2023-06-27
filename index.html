@@ -9,7 +9,7 @@
     <meta name="description" content="Сайт портфолио некоего студента по кличке Веслов">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-      <script src="js/changeTheme.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 
 <body class="dark-theme">
@@ -65,12 +65,12 @@
                 <div class="skills-header">
                     <h2>Мои навыки</h2>
                     <div class="skills-buttons"> сортировать
-                        <button>по названию</button>
-                        <button>по уровню</button>
+                        <button type="button" data-type="name">по названию</button>
+                        <button type="button" data-type="level">по уровню</button>
                     </div>
                 </div>
                 <dl class="skill-list">
-                    
+
                 </dl>
 
             </section>
@@ -116,6 +116,10 @@
                     </li>
                 </ul>
             </section>
+            <label class="switch">
+                <input class="switch-checkbox" type="checkbox">
+                <span class="switch-slider"></span>
+            </label>
         </main>
     </div>
     <footer class="main-footer">
@@ -123,9 +127,9 @@
             <p> © Веселов Ярослав 2023</p>
         </div>
     </footer>
-    <!--<p><button type="button" onclick="changeTheme()">Случайная кнопка</button></p>-->
 
-  <script src="js/script.js"></script>
+
+
 </body>
 
 </html>
