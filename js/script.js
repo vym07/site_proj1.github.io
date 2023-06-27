@@ -1,31 +1,75 @@
 
 const skills = {
-    data: [{
-        item: "javascript",
-        level: 30,
-        iconPath: "img/skills/javascript.svg",
-    },
-    {
-        item: "html",
-        level: 70,
-        iconPath: "img/skills/html.svg",
-    },
-    {
-        item: "CSS",
-        level: 50,
-        iconPath: "img/skills/css.svg",
-    },
-    {
-        item: "C++",
-        level: 50,
-        iconPath: "img/skills/cpp.svg",
-    },
-    {
-        item: "English",
-        level: 40,
-        iconPath: "img/skills/english.svg",
-    }],
+    data: [],
     isSorted: false,
+    isInErrorState: false,
+    jsonPath: 'db/skills.json',
+    skillList: null,
+    sectionSkills: null,
+    initList: function(jsonPath, skillList, sectionSkills) {
+        this.jsonPath = jsonPath;
+        this.skillList = skillList;
+        this.sectionSkills = sectionSkills;
+        console.log(jsonPath);
+        fetch(jsonPath)
+            .then(data => data.json())
+            .then(object => {
+                if (this.isInErrorState) {
+                    this.isInErrorState = false;
+                    this.renderErrorToggle(skillList, sectionSkills);
+                }
+                this.data = object;
+                this.generateList(skillList);
+            })
+            .catch(() => {
+                // Данные, для отображения в случае ошибки
+                skills.data =  [
+                    {"item": "Sample","level": 90, "iconPath": "img/skills/cpp.svg"},
+                    {"item": "Sample","level": 80, "iconPath": "img/skills/css.svg"},
+                    {"item": "Sample","level": 70, "iconPath": "img/skills/english.svg"},
+                    {"item": "Sample","level": 60, "iconPath": "img/skills/html.svg"},
+                    {"item": "Sample","level": 50, "iconPath": "img/skills/vue.svg"}]
+                this.generateList(skillList);
+                this.isInErrorState = true;
+                this.renderErrorToggle(skillList, sectionSkills);
+            });
+    },
+
+    renderErrorToggle: function(skillList, sectionSkills) {
+        errorMsg = document.querySelector('#createdErrorMessage');
+        if (!this.isInErrorState) {
+            if (errorMsg !== null) {
+                errorMsg.remove();
+            }
+            skillList.style.webkitFilter = '';
+            this.btns.forEach((btn) => {
+                btn.disabled = false;
+            })
+            return;
+        }
+
+        if (errorMsg === null) {
+            skillsWrapper = document.querySelector('.skills-wrapper');
+            this.btns = sortBtnsBlock.querySelectorAll('button')
+            this.btns.forEach((btn) => {
+                btn.disabled = true;
+            })
+            skillList.style.webkitFilter = 'blur(30px)';
+            skillList.style.zIndex = 0;
+
+            errorMsg = document.createElement('div');
+            errorMsg.textContent = 'При загрузке данных произошла ошибка.'
+            errorMsg.classList.add('error-message');
+            errorBtn = document.createElement('button');
+            errorBtn.textContent = 'Попробовать еще раз';
+            errorMsg.appendChild(errorBtn);
+            errorMsg.id = 'createdErrorMessage';
+            errorBtn.addEventListener('click', () => {
+                this.initList('db/skills_copy.json', this.skillList, this.sectionSkills);
+            })
+            skillsWrapper.append(errorMsg);
+        }
+    },
     generateList: function(parentElement) {
         parentElement.innerHTML = '';
         this.data.forEach(element => {
@@ -84,7 +128,9 @@ const menu = {
 };
 
 // Первое создание списка навыков
-skills.generateList(skillListSelector);
+const skillList = document.querySelector('dl.skill-list');
+const sectionSkills = document.querySelector('section.skills');
+skills.initList('db/skills.json', skillList, sectionSkills);
 
 // Сортировки списка по кнопкам
 const sortBtnsBlock = document.querySelector('.skills-buttons');

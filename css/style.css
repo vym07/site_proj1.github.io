@@ -72,6 +72,10 @@ a:hover {
   text-decoration: none;
 }
 
+.skills-wrapper {
+  position: relative;
+}
+
 
 .main-header {
   display: flex;
@@ -659,4 +663,21 @@ div[class^="skill-item_"] {
     color: var(--green);
   }
 
+}
+
+.error-message {
+  z-index: 1;
+  border: 3px solid var(--green);
+  padding: 25px;
+  position: absolute;
+  background-color: var(--white);
+  display: grid;
+  gap: 10px;
+  border-radius: 10px;
+
+  min-width: 320px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
